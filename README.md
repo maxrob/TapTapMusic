@@ -1,30 +1,21 @@
 TapTapMusic
 ==========
 
-HETIC's P2017 project developped in 2 weeks. 
+HETIC's P2017 project developped in 1 month. 
 
-This project is an experience to find out masterpieces and their influences over time.
+This project is a music game allowing to play piano on his mobile with partitions on the desktop.
 
-Link : http://influence.robinmastromarino.com/
+Link : Currently, the game is not online.
 
-In this project, I create the API on Laravel and return data with JSON.
+In this project, I modify the MidiJs Api with Ravichandrane and I create the link between Desktop and Mobile thanks to NodeJs.
 
 ## Dependencies :
 
 - NodeJS
-- Gulp
-- Handlebars
+- Native JS 
 
 ## API :
 
-PHP API based on framework Laravel. Single JSON output.
+Use the MidiJs API
 
-## Install this project
 
-Run in terminal
-
-```
-    $ npm install
-```
-
-You're all set ! 
