@@ -13,7 +13,7 @@ var modelPiano ={
             11: !0
         };
 
-        this.socket = io.connect('http://37.187.122.232:3000');
+        this.socket = io.connect('');
         console.log('desktop connecté');
         this.socket.emit('desktop');
         modelPiano.listen();
