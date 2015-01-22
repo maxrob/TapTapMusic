@@ -17,7 +17,7 @@ var modelPiano ={
         Piano.keys = [];
         Piano.offsetLeft = -14;
 
-        this.socket = io.connect('http://37.187.122.232:3000');
+        this.socket = io.connect('');
         console.log('mobile connecté');
         this.socket.emit('mobile');
 
