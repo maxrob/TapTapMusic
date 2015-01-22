@@ -8,7 +8,7 @@ var Piano = {};
 
 //Function Global
 var loader, canvas = {},
-    host = "http://ravirajendran.fr";
+    host = "";
 
 var score = 100;
 var totalNote = 0;
