@@ -3,7 +3,7 @@ TapTapMusic
 
 HETIC's P2017 project developped in 1 month. 
 
-This project is a music game allowing to play piano on his mobile with partitions on the desktop.
+This project is a music game allows to play piano on his mobile with partitions on the desktop.
 
 Link : Currently, the game isn't online.
 
