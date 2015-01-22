@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Tap Tap - Music</title>
+	<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script type="text/javascript" src="../js/api.js" ></script>
+	<script type="text/javascript" src="js/model.js" ></script>
+	<script type="text/javascript" src="js/view.js" ></script>
+	<script type="text/javascript" src="js/controller.js" ></script>
+</head>
+<body id="mobile">
+<div id="head">
+	<div class="wrapper">
+		<div id="control">
+			<img id="control-play" class="control" src="../img/play.png" toggled="true" width="64" height="64"/>
+		</div>
+	</div>
+</div>
+
+<div class="everything">
+	<div id="container">
+		<canvas id="white_keys" width="900"></canvas>
+		<canvas id="black_keys" width="900"></canvas>
+		<div id="keys"></div>
+	</div>
+</div>
+</body>
+</html>

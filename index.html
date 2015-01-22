@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<head>
+    <title>Tap Tap Music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="tap tap music playing music has never been so fun">
+	<meta property="og:locale" content="en_EN"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Tap Tap music"/>
+	<meta property="og:description" content="play music became a pleasure with tap tap Music"/>
+	<meta property="og:url" content="url du site"/>
+	<meta property="og:site_name" content="Tap Tap music"/>
+	<meta property="og:image" content=""/>
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:site" content="@TapTapmusique"/>
+	<meta property="twitter:title" content="Infinity and Beyond"/>
+	<meta property="twitter:description" content="tap tap music"/>
+	<meta property="twitter:image" content=""/>
+	<meta property="twitter:url" content=" url du site"/>
+
+    <link rel="stylesheet" href="css/style.css">
+
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script type="text/javascript" src="js/api.js" ></script>
+	<script type="text/javascript" src="js/model.js" ></script>
+	<script type="text/javascript" src="js/ui.js" ></script>
+	<script type="text/javascript" src="js/controller.js" ></script>
+</head>
+<body>
+<!-- Facebook share -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=220601758118969&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+	<div class="homepage-wrapper">
+		<div class="app">
+			<h1>
+				<img class="app__logo" src="img/logo.png" alt="logo">
+			</h1>
+			<h2 class="app__slogan">Playing music has never been so fun</h2>
+		</div>
+
+		<!-- Message d'intro -->
+		<div class="homeContent connect-section " id="connect-section">
+			<img src="http://img.ravirajendran.fr/img/ipad_mockup.png" alt="ipad">
+			<p>Visit <a href="#" class="url">http://goo.gl/Xywm0g</a> on your tablet <br>then click on</p>
+			<a href="#" class="btn" id="btn-next">Continue</a>
+		</div>
+
+		<!-- Commencer la partie -->
+		<div class="homeContent play-section hiddenRight" id="play-section">
+			<img src="http://img.ravirajendran.fr/img/piano.png" alt="piano">
+			<img src="http://img.ravirajendran.fr/img/piano.png" alt="piano">
+			<img src="http://img.ravirajendran.fr/img/piano.png" alt="piano">
+			<a href="#" class="btn btn-play" id="btn-play">JOUER</a>
+		</div>
+
+		<!-- Choix de track -->
+		<div class="homeContent tracks-wrapper hiddenRight" id="tracks-wrapper">
+			<h3>
+				<span>Which </span>
+				<span>track </span>
+				<span>would </span>
+				<span>you </span>
+				<span>like </span>
+				<span>to </span>
+				<span>play </span>
+				<span>?</span>
+			</h3>
+
+			<a href="Jean.mid" class="track">
+				<div class="track_cover">
+					<div class="play-track-icon" id="play-track-icon">
+						<div class="circle">
+							<div class="triangle"></div>
+						</div>
+					</div>
+					<div class="filter"></div>
+					<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover1.png" alt="cover" />
+				</div>
+			  <div class="track_infos">
+			  	<p class="track_infos_artist">Maxence Cyrin</p>
+			  	<p class="track_infos_title">No Cars Go</p>
+			  </div>
+			</a>
+
+			<a href="#" class="track">
+				<div class="track_cover">
+					<div class="play-track-icon" id="play-track-icon">
+						<div class="circle">
+							<div class="triangle"></div>
+						</div>
+					</div>
+					<div class="filter"></div>
+					<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover2.png" alt="cover" />
+				</div>
+			  <div class="track_infos">
+			  	<p class="track_infos_artist">Ólafur Arnalds</p>
+			  	<p class="track_infos_title">Erla's Waltz</p>
+			  </div>
+			</a>
+
+			<a href="#" class="track">
+				<div class="track_cover">
+					<div class="play-track-icon" id="play-track-icon">
+						<div class="circle">
+							<div class="triangle"></div>
+						</div>
+					</div>
+					<div class="filter"></div>
+					<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover3.png" alt="cover" />
+				</div>
+			  <div class="track_infos">
+			  	<p class="track_infos_artist">Aphex Twin</p>
+			  	<p class="track_infos_title">Avril 14th</p>
+			  </div>
+			</a>
+
+			<a href="#" class="track">
+				<div class="track_cover">
+					<div class="play-track-icon" id="play-track-icon">
+						<div class="circle">
+							<div class="triangle"></div>
+						</div>
+					</div>
+					<div class="filter"></div>
+					<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover4.png" alt="cover" />
+				</div>
+			  <div class="track_infos">
+			  	<p class="track_infos_artist">Jon Hopkins</p>
+			  	<p class="track_infos_title">Abandon Window</p>
+			  </div>
+			</a>
+		</div>
+
+		<!-- Piano -->
+		<div id="mainPiano" class="hiddenRight">
+			<div id="head">
+				<div class="wrapper">
+					<span id="capsule">
+						<span id="cursor"></span>
+					</span>
+
+					<div id="playback">
+						<img id="control-play" class="control" toggled="true"/>
+
+						<div id="playback-title"></div>
+
+
+						<div class="time-controls">
+							 <span id="time" class="time" style="text-align: left;">0:0</span>
+						</div>
+					</div>
+
+					<div id="result">
+						Score : <span id="score"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="everything">
+				<div id="container1">
+					<canvas id="white_keys1" width="750"></canvas>
+					<canvas id="black_keys1" width="750"></canvas>
+					<div id="keys1"></div>
+				</div>
+			</div>
+
+			<a href="#" class="btn btn-showResult" id="showResult">Show result</a>
+		</div>
+
+
+		<!-- Choix de track -->
+		<div id="trackResult" class="results hiddenRight">
+			<div class="results_part notes-sucess">
+				<p class="results_part_title">Awesome ! You reached</p>
+				<span id="sucessRate"></span>
+				<span class="percentage">%</span>
+				<p class="title-end">of notes success</p>
+				<a href="http://wp.ravirajendran.fr" class="btn btn-replay">Replay</a>
+				<a href="https://twitter.com/share?url=http://wp.ravirajendran.fr&via=TapTapmusique&related=twitterapi,twitter&hashtags=hetic&text=Essayez de battre mon score sur TapTapAcademy" target="_blank" class="btn btn-twitter">Share</a>
+				</br>
+				<div id="posFb" class="fb-share-button" data-href="http://wp.ravirajendran.fr" data-layout="button"></div>
+			</div>
+
+
+			<div class="results_part play-another-track">
+				<p class="results_part_title">Let me play another track !</p>
+				<div class="anothertrack-wrapper">
+					<a href="#" class="track">
+						<div class="track_cover">
+							<div class="play-track-icon" id="play-track-icon">
+								<div class="circle">
+									<div class="triangle"></div>
+								</div>
+							</div>
+							<div class="filter"></div>
+							<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover3.png" alt="cover" />
+						</div>
+					  <div class="track_infos">
+					  	<p class="track_infos_artist">Aphex Twin</p>
+					  	<p class="track_infos_title">Avril 14th</p>
+					  </div>
+					</a>
+
+					<a href="#" class="track">
+						<div class="track_cover">
+							<div class="play-track-icon" id="play-track-icon">
+								<div class="circle">
+									<div class="triangle"></div>
+								</div>
+							</div>
+							<div class="filter"></div>
+							<img class="track_cover" src="http://img.ravirajendran.fr/img/covers/cover4.png" alt="cover" />
+						</div>
+					  <div class="track_infos">
+					  	<p class="track_infos_artist">Jon Hopkins</p>
+					  	<p class="track_infos_title">Abandon Window</p>
+					  </div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
