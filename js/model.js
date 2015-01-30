@@ -107,7 +107,7 @@ var modelPiano ={
                             Piano.loadExternalMIDICallback(host + "/audio/" + baseFile);
                         }else{
                             DOMLoader.script.add({
-                                src: "http://ravirajendran.fr/midi-to-json.php?query=" + encodeURIComponent(baseFile)
+                                src: "http://.../midi-to-json.php?query=" + encodeURIComponent(baseFile)
                             });
                         }
                     }else{
